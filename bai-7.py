@@ -9,7 +9,10 @@ while True:
       hocsinh.append(name)
     elif nhap ==2:
         name = input("Xoa hoc sinh: ")
-        hocsinh.remove(name)
+        if name not in hocsinh:
+            print(f"{name} khong co trong danh sach hs")
+        else:
+            hocsinh.remove(name)
     elif nhap ==3:
         for hs in hocsinh:
             print(f"{hs}")
